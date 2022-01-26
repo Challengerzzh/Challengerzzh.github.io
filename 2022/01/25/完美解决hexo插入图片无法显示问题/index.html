@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>完美解决hexo插入图片无法显示问题 | 张智涵的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="hexo博客中插入图片却无法显示，解决方案如下1.打开Git Bash，安装图片路径转换插件npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save2.更换&#x2F;node_modules&#x2F;hexo-asset-image&#x2F;index.js为如下内容 &#39;use strict&#39;; var cheerio &#x3D; req">
+<meta property="og:type" content="article">
+<meta property="og:title" content="完美解决hexo插入图片无法显示问题">
+<meta property="og:url" content="http://example.com/2022/01/25/%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="张智涵的个人博客">
+<meta property="og:description" content="hexo博客中插入图片却无法显示，解决方案如下1.打开Git Bash，安装图片路径转换插件npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save2.更换&#x2F;node_modules&#x2F;hexo-asset-image&#x2F;index.js为如下内容 &#39;use strict&#39;; var cheerio &#x3D; req">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-01-25T12:55:05.000Z">
+<meta property="article:modified_time" content="2022-01-25T12:56:12.600Z">
+<meta property="article:author" content="Zhang Zhihan; Shijiazhuangtiedao University">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="张智涵的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">张智涵的个人博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Welcome to Zhang Zhihan&#39;s blog !</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-完美解决hexo插入图片无法显示问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/01/25/%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2022-01-25T12:55:05.000Z" itemprop="datePublished">2022-01-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      完美解决hexo插入图片无法显示问题
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="hexo博客中插入图片却无法显示，解决方案如下"><a href="#hexo博客中插入图片却无法显示，解决方案如下" class="headerlink" title="hexo博客中插入图片却无法显示，解决方案如下"></a>hexo博客中插入图片却无法显示，解决方案如下</h3><p>1.打开Git Bash，安装图片路径转换插件<br><code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code><br>2.更换/node_modules/hexo-asset-image/index.js为如下内容</p>
+<pre><code>&#39;use strict&#39;;
+var cheerio = require(&#39;cheerio&#39;);
+
+// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string
+function getPosition(str, m, i) &#123;
+  return str.split(m, i).join(m).length;
+&#125;
+
+var version = String(hexo.version).split(&#39;.&#39;);
+hexo.extend.filter.register(&#39;after_post_render&#39;, function(data)&#123;
+  var config = hexo.config;
+  if(config.post_asset_folder)&#123;
+        var link = data.permalink;
+    if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)
+       var beginPos = getPosition(link, &#39;/&#39;, 1) + 1;
+    else
+       var beginPos = getPosition(link, &#39;/&#39;, 3) + 1;
+    // In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.
+    var endPos = link.lastIndexOf(&#39;/&#39;) + 1;
+    link = link.substring(beginPos, endPos);
+
+    var toprocess = [&#39;excerpt&#39;, &#39;more&#39;, &#39;content&#39;];
+    for(var i = 0; i &lt; toprocess.length; i++)&#123;
+      var key = toprocess[i];
+ 
+      var $ = cheerio.load(data[key], &#123;
+        ignoreWhitespace: false,
+        xmlMode: false,
+        lowerCaseTags: false,
+        decodeEntities: false
+      &#125;);
+
+      $(&#39;img&#39;).each(function()&#123;
+        if ($(this).attr(&#39;src&#39;))&#123;
+            // For windows style path, we replace &#39;\&#39; to &#39;/&#39;.
+            var src = $(this).attr(&#39;src&#39;).replace(&#39;\\&#39;, &#39;/&#39;);
+            if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;
+               !/^\s*\//.test(src)) &#123;
+              // For &quot;about&quot; page, the first part of &quot;src&quot; can&#39;t be removed.
+              // In addition, to support multi-level local directory.
+              var linkArray = link.split(&#39;/&#39;).filter(function(elem)&#123;
+                return elem != &#39;&#39;;
+              &#125;);
+              var srcArray = src.split(&#39;/&#39;).filter(function(elem)&#123;
+                return elem != &#39;&#39; &amp;&amp; elem != &#39;.&#39;;
+              &#125;);
+              if(srcArray.length &gt; 1)
+                srcArray.shift();
+              src = srcArray.join(&#39;/&#39;);
+              $(this).attr(&#39;src&#39;, config.root + link + src);
+              console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);
+            &#125;
+        &#125;else&#123;
+            console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);
+            console.info&amp;&amp;console.info($(this));
+        &#125;
+      &#125;);
+      data[key] = $.html();
+    &#125;
+  &#125;
+&#125;);
+</code></pre>
+<p>3.打开hexo文件夹下的_config.yml文件，修改下述内容<br><code> post_asset_folder: true</code><br><strong>4.在.md文件中输入的文件路径</strong></p>
+<p>第一步安装插件后，new一个blog之后，_posts文件夹下不仅会自动生成名为blog.md的文件，还会生成一个<strong>名为blog的文件夹</strong>。文件夹内存放着blog.md内使用的图片资源。比如blog文件夹下存放着需要使用的图片picture.png，那么我们应该这么写调用图片的文件路径：<br><code>./blog/picture.png</code><br>Markdown就是：<br><code>![要替换的文字](./blog/picture.png</code>)`</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/01/25/%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/" data-id="ckyu4hcre00006suh53302epo" data-title="完美解决hexo插入图片无法显示问题" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/01/25/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">我的第一篇博客</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/01/25/%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">完美解决hexo插入图片无法显示问题</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/25/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/25/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Zhang Zhihan; Shijiazhuangtiedao University<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
