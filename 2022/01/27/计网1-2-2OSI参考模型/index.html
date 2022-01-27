@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>计网1.2.2OSI参考模型 | 张智涵的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1.2.2 OSI参考模型计算机网络分层结构包括7层OSI参考模型（法定标准）和4层TCP&#x2F;IP参考模型（事实标准） ISO&#x2F;OSI参考模型是怎么来的？为了支持异构网络系统的互联互通，国际化标准组织ISO于1984年提出开放系统互连OSI参考模型。 ISO&#x2F;OSI参考模型 ISO&#x2F;OSI参考模型解释通信过程  应用层所有能和用户交互产生网络流量的程序典型应用层服务：文件传输（FTP）、电子邮件（S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计网1.2.2OSI参考模型">
+<meta property="og:url" content="http://example.com/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/index.html">
+<meta property="og:site_name" content="张智涵的个人博客">
+<meta property="og:description" content="1.2.2 OSI参考模型计算机网络分层结构包括7层OSI参考模型（法定标准）和4层TCP&#x2F;IP参考模型（事实标准） ISO&#x2F;OSI参考模型是怎么来的？为了支持异构网络系统的互联互通，国际化标准组织ISO于1984年提出开放系统互连OSI参考模型。 ISO&#x2F;OSI参考模型 ISO&#x2F;OSI参考模型解释通信过程  应用层所有能和用户交互产生网络流量的程序典型应用层服务：文件传输（FTP）、电子邮件（S">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/1.png">
+<meta property="og:image" content="http://example.com/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/2.png">
+<meta property="og:image" content="http://example.com/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/3.png">
+<meta property="og:image" content="http://example.com/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/4.png">
+<meta property="og:image" content="http://example.com/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/5.png">
+<meta property="article:published_time" content="2022-01-27T02:17:36.000Z">
+<meta property="article:modified_time" content="2022-01-27T02:46:05.053Z">
+<meta property="article:author" content="Zhang Zhihan; Shijiazhuangtiedao University">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="张智涵的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">张智涵的个人博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Welcome to Zhang Zhihan&#39;s blog !</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-计网1-2-2OSI参考模型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/" class="article-date">
+  <time class="dt-published" datetime="2022-01-27T02:17:36.000Z" itemprop="datePublished">2022-01-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      计网1.2.2OSI参考模型
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="1-2-2-OSI参考模型"><a href="#1-2-2-OSI参考模型" class="headerlink" title="1.2.2 OSI参考模型"></a>1.2.2 OSI参考模型</h1><p>计算机网络分层结构包括<strong>7层OSI参考模型</strong>（法定标准）和<strong>4层TCP/IP参考模型</strong>（事实标准）</p>
+<h2 id="ISO-OSI参考模型是怎么来的？"><a href="#ISO-OSI参考模型是怎么来的？" class="headerlink" title="ISO/OSI参考模型是怎么来的？"></a>ISO/OSI参考模型是怎么来的？</h2><p>为了支持<strong>异构网络系统的互联互通</strong>，国际化标准组织ISO于1984年提出开放系统互连OSI参考模型。</p>
+<h2 id="ISO-OSI参考模型"><a href="#ISO-OSI参考模型" class="headerlink" title="ISO/OSI参考模型"></a>ISO/OSI参考模型</h2><p><img src="/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/1.png" alt="OSI七层"></p>
+<h2 id="ISO-OSI参考模型解释通信过程"><a href="#ISO-OSI参考模型解释通信过程" class="headerlink" title="ISO/OSI参考模型解释通信过程"></a>ISO/OSI参考模型解释通信过程</h2><p><img src="/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/2.png"></p>
+<p><img src="/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/3.png"></p>
+<h2 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h2><p>所有能和用户交互产生网络流量的程序<br>典型应用层服务：文件传输（FTP）、电子邮件（SMTP）、万维网（HTTP）…..</p>
+<h2 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h2><p><img src="/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/4.png" alt="表示层"></p>
+<h2 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h2><p><img src="/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/5.png" alt="会话层"></p>
+<h2 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h2><p>![会话层](./计网1.2.2OSI参考模型/6.png</p>
+<h2 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h2><p>![会话层](./计网1.2.2OSI参考模型/7.png</p>
+<h2 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h2><p>![会话层](./计网1.2.2OSI参考模型/8.png</p>
+<h2 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h2><p>![会话层](./计网1.2.2OSI参考模型/9.png</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/" data-id="ckywdk5ps0000pkuhekzyckwb" data-title="计网1.2.2OSI参考模型" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/01/27/%E8%AE%A1%E7%BD%911-2-1%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84%E3%80%81%E5%8D%8F%E8%AE%AE%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E6%9C%8D%E5%8A%A1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">计网1.2.1分层结构、协议、接口、服务</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/01/27/%E8%AE%A1%E7%BD%911-2-2OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/">计网1.2.2OSI参考模型</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/27/%E8%AE%A1%E7%BD%911-2-1%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84%E3%80%81%E5%8D%8F%E8%AE%AE%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E6%9C%8D%E5%8A%A1/">计网1.2.1分层结构、协议、接口、服务</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/26/%E8%AE%A1%E7%BD%911-1-4%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87%E4%B9%8B%E6%97%B6%E5%BB%B6%E3%80%81%E6%97%B6%E5%BB%B6%E5%B8%A6%E5%AE%BD%E7%A7%AF%E3%80%81%E5%BE%80%E8%BF%94%E6%97%B6%E9%97%B4RRT%E3%80%81%E5%88%A9%E7%94%A8%E7%8E%87/">计网1.1.4性能指标之时延、时延带宽积、往返时间RRT、利用率</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/26/%E8%AE%A1%E7%BD%911-1-3%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87%E4%B9%8B%E9%80%9F%E7%8E%87%E3%80%81%E5%B8%A6%E5%AE%BD%E3%80%81%E5%90%9E%E5%90%90%E9%87%8F/">计网1.1.3性能指标之速率、带宽、吞吐量</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/26/%E8%AE%A1%E7%BD%911-1-2%E6%A0%87%E5%87%86%E5%8C%96%E5%B7%A5%E4%BD%9C%E5%8F%8A%E7%9B%B8%E5%85%B3%E7%BB%84%E7%BB%87/">计网1.1.2标准化工作及相关组织</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Zhang Zhihan; Shijiazhuangtiedao University<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
